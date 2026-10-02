@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+jinja2
+python-dotenv
+google-genai
+pydantic
+httpx
+pytest
+transformers
+torch
+sentencepiece

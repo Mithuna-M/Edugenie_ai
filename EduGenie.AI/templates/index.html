@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EduGenie - AI Learning Assistant</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', path='style.css') }}"
+    >
+</head>
+
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+
+            <div class="logo">
+                <span class="logo-icon">✦</span>
+                <span>EduGenie</span>
+            </div>
+
+            <h1>
+                Your AI-Powered
+                <span>Learning Assistant</span>
+            </h1>
+
+            <p>
+                Learn concepts, ask questions, generate quizzes,
+                summarize content, and build personalized learning paths.
+            </p>
+
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <section class="tool-card">
+
+            <div class="card-heading">
+                <div>
+                    <h2>What would you like to learn?</h2>
+                    <p>
+                        Choose a learning tool and enter your content below.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="task-grid">
+
+                <button
+                    class="task-button active"
+                    data-task="qa"
+                    type="button"
+                >
+                    <span class="task-icon">💬</span>
+                    <span>
+                        <strong>Q&amp;A</strong>
+                        <small>Ask a question</small>
+                    </span>
+                </button>
+
+
+                <button
+                    class="task-button"
+                    data-task="explain"
+                    type="button"
+                >
+                    <span class="task-icon">💡</span>
+                    <span>
+                        <strong>Explain</strong>
+                        <small>Understand a concept</small>
+                    </span>
+                </button>
+
+
+                <button
+                    class="task-button"
+                    data-task="quiz"
+                    type="button"
+                >
+                    <span class="task-icon">📝</span>
+                    <span>
+                        <strong>Quiz</strong>
+                        <small>Test your knowledge</small>
+                    </span>
+                </button>
+
+
+                <button
+                    class="task-button"
+                    data-task="summarize"
+                    type="button"
+                >
+                    <span class="task-icon">📄</span>
+                    <span>
+                        <strong>Summary</strong>
+                        <small>Summarize content</small>
+                    </span>
+                </button>
+
+
+                <button
+                    class="task-button"
+                    data-task="learning"
+                    type="button"
+                >
+                    <span class="task-icon">🧭</span>
+                    <span>
+                        <strong>Learning Path</strong>
+                        <small>Build a study plan</small>
+                    </span>
+                </button>
+
+            </div>
+
+
+            <form id="eduForm">
+
+                <div
+                    id="levelContainer"
+                    class="field hidden"
+                >
+                    <label for="level">
+                        Your current level
+                    </label>
+
+                    <select id="level">
+                        <option value="beginner">
+                            Beginner
+                        </option>
+
+                        <option value="intermediate">
+                            Intermediate
+                        </option>
+
+                        <option value="advanced">
+                            Advanced
+                        </option>
+                    </select>
+                </div>
+
+
+                <div class="field">
+
+                    <label for="userInput">
+                        <span id="inputLabel">
+                            Your question
+                        </span>
+                    </label>
+
+                    <textarea
+                        id="userInput"
+                        rows="9"
+                        placeholder="Example: What is machine learning?"
+                        required
+                    ></textarea>
+
+                    <div class="character-count">
+                        <span id="characterCount">0</span>
+                        characters
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="submitButton"
+                    class="submit-button"
+                    type="submit"
+                >
+                    <span id="submitText">
+                        Ask EduGenie
+                    </span>
+
+                    <span
+                        id="loadingSpinner"
+                        class="spinner hidden"
+                    ></span>
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <section
+            id="resultSection"
+            class="result-card hidden"
+        >
+
+            <div class="result-header">
+
+                <div>
+                    <span class="result-label">
+                        EDU-GENIE RESULT
+                    </span>
+
+                    <h2 id="resultTitle">
+                        Result
+                    </h2>
+                </div>
+
+                <button
+                    id="copyButton"
+                    class="secondary-button"
+                    type="button"
+                >
+                    Copy
+                </button>
+
+            </div>
+
+
+            <div id="resultContent"></div>
+
+        </section>
+
+
+        <section class="features">
+
+            <div class="feature">
+                <span>🤖</span>
+
+                <h3>AI Powered</h3>
+
+                <p>
+                    Generative AI helps you understand
+                    academic concepts.
+                </p>
+            </div>
+
+
+            <div class="feature">
+                <span>⚡</span>
+
+                <h3>Fast Learning</h3>
+
+                <p>
+                    Get concise answers and summaries
+                    for quick revision.
+                </p>
+            </div>
+
+
+            <div class="feature">
+                <span>🎯</span>
+
+                <h3>Personalized</h3>
+
+                <p>
+                    Build learning paths based on
+                    your current level.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            EduGenie · AI-Powered Learning Assistant
+        </p>
+    </footer>
+
+
+    <script
+        src="{{ url_for('static', path='app.js') }}"
+    ></script>
+
+</body>
+</html>
