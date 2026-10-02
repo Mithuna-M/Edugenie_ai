@@ -255,11 +255,3 @@ Contributions are welcome!
 Developed as an educational AI project to make learning more accessible,
 interactive, and personalized.
 
-## 📄 License
-
-No license has been specified yet. Add a license file if you intend to
-distribute or allow reuse of this project.
-
-------------------------------------------------------------------------
-
-⭐ If you find EduGenie AI useful, consider starring the repository!
